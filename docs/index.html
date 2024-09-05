@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto SEV</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <h1>Seja bem-vindo ao Projeto SEV</h1>
+    <div class="container">
+
+        <div class="informacoes">
+            <div class="mensagens">
+                <h1>BEM VINDO!</h1>
+                <p>Utilize suas credenciais para continuar.</p>
+            </div>
+            <img src="./assets//pictures/platech-icon.png" alt="">
+        </div>
+
+        <form action="" method="post" class="forms">
+            
+            <label for="cpf">CPF</label>
+            <input name="cpf" type="number" placeholder="_ _ _._ _ _. _ _ _-_ _" required>
+
+            <label for="senha">Senha</label>
+            <input style="margin-bottom: 20px;" type="password" name="senha" placeholder="Digite sua senha" required>
+
+            <div style="margin-bottom: 30px;">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Lembrar</label>
+            </div>
+
+            <button style="margin-bottom: 30px;" id="botao" type="submit">Entrar</button>
+
+            <a href="">Esqueceu a senha?</a>
+        </form>
+    </div>
+
 </body>
 </html>
