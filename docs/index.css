@@ -1,0 +1,88 @@
+:root {
+    --color-text: #4D4D4D;
+    --color-background-form: #ECECEC;
+    --color-background-button: #0065C8;
+    --color-text-button: #FFFFFF;
+}
+
+body {
+        background-image: linear-gradient(to bottom, #fff, #0065C8);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #0065C8;
+    color: #fff;
+    height: 130px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.mensagens {
+    width: 250px;
+}
+
+.mensagens h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mensagens p {
+    font-size: 16px;
+}
+
+.informacoes img {
+    width: 170px;
+    height: 50px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-background-form);
+    width: 500px;
+    height: 100px;
+    padding: 150px 50px;
+    border-radius: 10px;
+}
+
+#botao {
+    background-color: var(--color-background-button);
+    color: var(--color-text-button);
+    width: 200px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    align-self: center;
+}
+
+input {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 0.1px solid var(--color-text);
+}
+
+label {
+    color: var(--color-text);
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+a {
+    align-self: center;
+    text-decoration: none;
+    color: var(--color-text);
+}
