@@ -15,9 +15,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+  padding: 40px 50px 40px 50px;
   position: fixed;
   width: 100%;
   max-width: 100%;  
@@ -29,7 +27,6 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
   box-sizing: border-box;
 }
 
