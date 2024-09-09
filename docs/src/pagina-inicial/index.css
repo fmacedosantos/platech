@@ -76,3 +76,38 @@ body {
     height: auto;
   }
 }
+
+.square {
+  position: relative;
+  width: 928px;
+  height: 529px;
+  background: #ECECEC;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.table {
+  text-align: center;
+  max-height: 529px;
+  width: 928px;
+  tr > th:first-child { position: relative; left: 0px; top: -19px; } /* primeira coluna */
+   tr > th:first-child + th { position: relative; left: 0px; top: -19px; } /* segunda coluna */
+  tr > th:first-child + th + th { position: relative; left: 0px; top: -19px; } /* terceira coluna */
+  tr > th:first-child + th + th +th { position: relative; left: 0px; top: -19px;} /* quarta coluna */
+}
+
+th {
+  box-sizing: border-box ;
+  width: 208px;
+  height: 36px;
+  border: 1px solid white;
+  background: #0065C8;
+  color: white;
+}
+
+tr, td {
+  position: relative;
+  top: 1px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
