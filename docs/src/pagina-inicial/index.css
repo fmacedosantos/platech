@@ -91,9 +91,11 @@ body {
   max-height: 529px;
   width: 928px;
   tr > th:first-child { position: relative; left: 0px; top: -19px; } /* primeira coluna */
-   tr > th:first-child + th { position: relative; left: 0px; top: -19px; } /* segunda coluna */
+  tr > th:first-child + th { position: relative; left: 0px; top: -19px; } /* segunda coluna */
   tr > th:first-child + th + th { position: relative; left: 0px; top: -19px; } /* terceira coluna */
   tr > th:first-child + th + th +th { position: relative; left: 0px; top: -19px;} /* quarta coluna */
+
+  tr > td:first-child + td + td +td { position: relative; top: 1px; border-bottom: 1px solid black; border-right: 0px;}
 }
 
 th {
