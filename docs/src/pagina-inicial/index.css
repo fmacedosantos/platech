@@ -98,6 +98,13 @@ body {
   tr > td:first-child + td + td +td { position: relative; top: 1px; border-bottom: 1px solid black; border-right: 0px;}
 }
 
+.refresh {
+  position: relative;
+  left: 50px;
+  width: 23px;
+  height: 23px;
+}
+
 th {
   box-sizing: border-box ;
   width: 208px;
