@@ -76,3 +76,49 @@ body {
     height: auto;
   }
 }
+
+.square {
+  position: relative;
+  width: 1000px;
+  height: 529px;
+  position: absolute;
+  background: #ECECEC;
+  border-radius: 10px;
+  overflow: visible;
+  z-index: 1;
+}
+
+.table {  
+  text-align: center;
+  max-height: 529px;
+  width: 928px;
+  background-color: transparent;
+  position: absolute;
+  tr > td:last-child { top: 1px; border-bottom: 1px solid black; border-right: 0px;}
+  z-index: 2;
+  left: 48px;
+  top: -16px;
+}
+
+.refresh {
+  position: relative;
+  left: 50px;
+  width: 23px;
+  height: 23px;
+}
+
+th {
+  box-sizing: border-box ;
+  width: 208px;
+  height: 36px;
+  border: 1px solid white;
+  background: #0065C8;
+  color: white;
+}
+
+tr, td {
+  position: relative;
+  top: px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
