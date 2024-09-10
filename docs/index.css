@@ -5,6 +5,17 @@
     --color-text-button: #FFFFFF;
 }
 
+@media (max-width: 650px) {
+    #container-informacoes {
+        display: none;
+    }
+
+    #loginForm {
+        width: 45%;
+    }
+
+}
+
 body {
         background-image: linear-gradient(to bottom, #fff, #0065C8);
         font-family: "Inter";
