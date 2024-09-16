@@ -1,0 +1,117 @@
+$color-text: #4d4d4d;
+$color-background-form: #ececec;
+$color-background-button: #0065c8;
+$color-button: #ffffff;
+$color-white: #fff;
+$color-square: #ececec;
+$color-black: black;
+
+@media (max-width: 650px) {
+  #container-informacoes {
+    display: none;
+  }
+
+  #loginForm {
+    width: 45%;
+  }
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    $color-white,
+    $color-background-button
+  );
+  font-family: "Inter";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $color-background-button;
+  color: $color-white;
+  height: 130px;
+  width: 600px;
+  border-radius: 10px;
+}
+
+.mensagens {
+  width: 250px;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.descricao {
+  font-size: 16px;
+}
+
+.icone {
+  width: 170px;
+  height: 50px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-background-form);
+  width: 500px;
+  height: 100px;
+  padding: 150px 50px;
+  border-radius: 10px;
+}
+
+.botao {
+  background-color: var(--color-background-button);
+  color: var(--color-text-button);
+  margin-bottom: 30px;
+  width: 200px;
+  padding: 10px 0px;
+  border-radius: 5px;
+  border: none;
+  align-self: center;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 0.1px solid var(--color-text);
+}
+
+label {
+  color: var(--color-text);
+  padding-top: 20px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.esqueceu-senha {
+  margin-left: 10px;
+  align-self: center;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.container-lembrar-senha {
+  margin-bottom: 30px;
+}
+
+.container-esqueceu-senha {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 14px;
+}

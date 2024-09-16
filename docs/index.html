@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto SEV</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
+      <div id="container-informacoes" class="informacoes">
+        <div class="mensagens">
+          <h1 id="teste3" class="titulo">BEM VINDO!</h1>
+          <p id="teste4" class="descricao">
+            Utilize suas credenciais para continuar.
+          </p>
+        </div>
+        <img
+          id="teste5"
+          class="icone"
+          src="./assets//pictures/platech-icon.png"
+          alt=""
+        />
+      </div>
 
-        <div id="container-informacoes" class="informacoes">
-            <div class="mensagens">
-                <h1 id="teste3" class="titulo">BEM VINDO!</h1>
-                <p id="teste4" class="descricao">Utilize suas credenciais para continuar.</p>
-            </div>
-            <img id="teste5" class="icone" src="./assets//pictures/platech-icon.png" alt="">
+      <form id="loginForm" method="post" class="formulario">
+        <label for="cpf">CPF</label>
+        <input
+          name="cpf"
+          type="number"
+          placeholder="_ _ _._ _ _. _ _ _-_ _"
+          required
+        />
+
+        <label for="senha">Senha</label>
+        <input
+          style="margin-bottom: 20px"
+          type="password"
+          name="senha"
+          placeholder="Digite sua senha"
+          required
+        />
+
+        <div class="container-lembrar-senha">
+          <input type="checkbox" id="remember-me" />
+          <label for="remember-me">Lembrar</label>
         </div>
 
-        <form id="loginForm" method="post" class="formulario">
-            <label for="cpf">CPF</label>
-            <input name="cpf" type="number" placeholder="_ _ _._ _ _. _ _ _-_ _" required>
+        <button class="botao" type="submit">Entrar</button>
 
-            <label for="senha">Senha</label>
-            <input style="margin-bottom: 20px;" type="password" name="senha" placeholder="Digite sua senha" required>
-
-            <div class="container-lembrar-senha">
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me">Lembrar</label>
-            </div>
-
-            <button class="botao" type="submit">Entrar</button>
-
-            <div class="container-esqueceu-senha">
-                <img src="./assets//lock.png" alt="">
-                <a class="esqueceu-senha">Esqueceu a senha?</a>
-            </div>
-        </form>
+        <div class="container-esqueceu-senha">
+          <img src="./assets//lock.png" alt="" />
+          <a class="esqueceu-senha">Esqueceu a senha?</a>
+        </div>
+      </form>
     </div>
-    <script src="./script.js"></script>
-</body>
+    <script src="./gulpfile.js"></script>
+  </body>
 </html>

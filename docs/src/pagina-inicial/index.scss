@@ -1,12 +1,19 @@
-:root {
-  --color-text: #4D4D4D;
-  --color-background-form: #ECECEC;
-  --color-background-button: #0065C8;
-  --color-text-button: #FFFFFF;
-}
+@import "../../global.scss";
+
+$color-text: #4d4d4d;
+$color-background-form: #ececec;
+$color-background-button: #0065c8;
+$color-button: #ffffff;
+$color-white: #fff;
+$color-square: #ececec;
+$color-black: black;
 
 body {
-  background-image: linear-gradient(to bottom, #fff, #0065C8);
+  background-image: linear-gradient(
+    to bottom,
+    $color-button,
+    $color-background-button
+  );
   font-family: "Inter", sans-serif;
   padding: 0;
   margin: 0;
@@ -18,7 +25,7 @@ body {
   padding: 40px 50px 40px 50px;
   position: fixed;
   width: 100%;
-  max-width: 100%;  
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -48,17 +55,17 @@ body {
 }
 
 .container {
-  padding: 20px; 
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(110vh - 93px); 
+  height: calc(110vh - 93px);
   box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .header-content {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 
@@ -72,7 +79,7 @@ body {
   }
 
   .container {
-    padding-top: 120px;  
+    padding-top: 120px;
     height: auto;
   }
 }
@@ -82,22 +89,28 @@ body {
   width: 1000px;
   height: 529px;
   position: absolute;
-  background: #ECECEC;
+  background: $color-square;
   border-radius: 10px;
   overflow: visible;
   z-index: 1;
 }
 
-.table {  
+.table {
   text-align: center;
   max-height: 529px;
   width: 928px;
   background-color: transparent;
   position: absolute;
-  tr > td:last-child { top: 1px; border-bottom: 1px solid black; border-right: 0px;}
   z-index: 2;
   left: 48px;
   top: -16px;
+  tr {
+    td:last-child {
+      top: 1px;
+      border-bottom: 1px solid black;
+      border-right: 0px;
+    }
+  }
 }
 
 .refresh {
@@ -108,17 +121,18 @@ body {
 }
 
 th {
-  box-sizing: border-box ;
+  box-sizing: border-box;
   width: 208px;
   height: 36px;
-  border: 1px solid white;
-  background: #0065C8;
+  border: 1px solid $color-white;
+  background: $color-background-button;
   color: white;
 }
 
-tr, td {
+tr,
+td {
   position: relative;
   top: px;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 1px solid $color-black;
+  border-right: 1px solid $color-black;
 }
