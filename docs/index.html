@@ -22,13 +22,14 @@
 
         <form id="loginForm" method="post" class="formulario">
             <label for="cpf">CPF</label>
-            <input name="cpf" type="number" placeholder="_ _ _._ _ _. _ _ _-_ _" required>
+            <input name="cpf" id="cpf" type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-00" required>
+
 
             <label for="senha">Senha</label>
-            <input style="margin-bottom: 20px;" type="password" name="senha" placeholder="Digite sua senha" required>
+            <input style="margin-bottom: 20px;" type="password" name="senha" id="senha" placeholder="Digite sua senha" required autocomplete="off">
 
             <div class="container-lembrar-senha">
-                <input type="checkbox" id="remember-me">
+                <input type="checkbox" name="lembrar" id="remember-me">
                 <label for="remember-me">Lembrar</label>
             </div>
 
