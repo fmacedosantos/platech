@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastro de Novo Cliente">
+    <title>Novo Cliente - Cadastro</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Novo Cliente</h1>
+        <p>Preencha o formulário para salvar um novo cliente.</p>
+        <form class="form">
+            <div class="form-group">
+                <label for="nomeCliente">Nome cliente</label>
+                <input type="text" id="nomeCliente" name="nomeCliente" placeholder="Digite o nome do cliente">
+            </div>
+            <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa">
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite o telefone">
+            </div>
+            <div class="form-group">
+                <label for="tipoCadastro">Tipo de cadastro</label>
+                <select id="tipoCadastro" name="tipoCadastro">
+                    <option value="despachante">Despachante</option>
+                    <option value="concessionaria">Concessionária</option>
+                    <option value="particular">Particular</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="valorCarro">Valor unitário da placa de CARRO</label>
+                <input type="number" id="valorCarro" name="valorCarro" placeholder="Digite o valor">
+            </div>
+            <div class="form-group">
+                <label for="valorMoto">Valor unitário da placa de MOTO</label>
+                <input type="number" id="valorMoto" name="valorMoto" placeholder="Digite o valor">
+            </div>
+            <div class="form-group">
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
