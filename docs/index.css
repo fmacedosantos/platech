@@ -5,7 +5,7 @@
     --color-text-button: #FFFFFF;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 620px) {
     #container-informacoes {
         display: none;
     }
