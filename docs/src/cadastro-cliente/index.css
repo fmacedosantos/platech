@@ -120,9 +120,21 @@ p {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 650px) {
     .form-group {
         flex: 1 1 100%;
+    }
+
+    .icone {
+        display: none;
+    }
+
+    .icone-profile {
+        display: none;
+    }
+
+    #description {
+        display: none;
     }
 }
 
