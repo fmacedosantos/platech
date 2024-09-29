@@ -5,6 +5,12 @@
   --color-text-button: #ffffff;
 }
 
+@media (max-width: 600px) {
+  .icone {
+    display: none;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
