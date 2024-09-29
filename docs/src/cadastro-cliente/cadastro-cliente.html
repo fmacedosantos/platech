@@ -18,6 +18,61 @@
 </header>
 <body>
     <div class="container">
+
+        <header class="header">
+            <div class="navbar">
+              <div class="navbar-content">
+                <div class="navbar-content-title">
+                  <h1>Platech</h1>
+                </div>
+                <div class="nav-item">
+                  <select class="nav-item-select">
+                    <option>Consultar placas</option>
+                  </select>
+                </div>
+                <div class="nav-item">
+                  <select class="nav-item-select" id="clientMenu">
+                    <option>Clientes</option>
+                    <option>Cadastrar Clientes</option>
+                  </select>
+                </div>
+                <div class="nav-item">
+                  <select class="nav-item-select">
+                    <option>Controle de material</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="header-content">
+              <div>
+                <button class="menu-toggle">
+                  <span class="hamburger"></span>
+                  <span class="hamburger"></span>
+                  <span class="hamburger"></span>
+                </button>
+              </div>
+    
+              <img
+                class="icone"
+                src="../../assets/pictures/platech-icon.png"
+                alt="logo da empresa platech"
+              />
+    
+              <div class="container_image_profile">
+                <img
+                  class="icone-profile"
+                  src="../../assets/pictures/profile-image.png"
+                  alt="imagem do usuário logado"
+                />
+              </div>
+            </div>
+          </header>
+    
+          <div class="overlay"></div>
+
+        <div>
+
+        </div>
         <h1>Novo Cliente</h1>
         <p id="description">Preencha o formulário para salvar um novo cliente.</p>
         <form class="form">
@@ -54,5 +109,6 @@
             </div>
         </form>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
