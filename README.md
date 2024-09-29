@@ -17,7 +17,7 @@ O Projeto SEV (PLATECH) visa desenvolver um sistema que auxilia no gerenciamento
 | Luan de Moraes Cesetti             | 202403382776   | Sistemas de Informação        | Programação Orientada a Objetos em Java, Desenv. Web em Html5, Css, Javascript e Php |
 | Pedro Henrique Menegatti Sandoval  | 202402394932   | Ciência da Computação         | Programação Orientada a Objetos em Java, Desenv. Web em Html5, Css, Javascript e Php |
 | Ismael Lourenço Benício            | 202404139042   | Ciência da Computação         | Desenv. Web em Html5, Css, Javascript e Php                                             |
-| Guilherme Escalon Correa           | 202402660314   | Ciência da Computação         | Desenv. Web em Html5, Css, Javascript e Php                                             |
+| Guilherme Escalon Correa           | 202402660314   | Análise e Desenvolvimento de Sistemas | Desenv. Web em Html5, Css, Javascript e Php                                             |
 | Rafael Meira De Oliveira           | 202403158469   | Análise e Desenvolvimento de Sistemas | Desenv. Web em Html5, Css, Javascript e Php                                             |
 
 
