@@ -25,3 +25,13 @@ const homeButton = document.getElementById('homeButton');
 homeButton.addEventListener('click', () => {
   window.location.href = '../pagina-inicial/pagina-inicial.html'
 })
+
+const controlMenu = document.getElementById('controlMenu');
+
+controlMenu.addEventListener('change', function() {
+  const selectedOption = this.value;
+
+  if (selectedOption == 'Lotes') {
+    window.location.href= '../lotes_estoque/index.html';
+  }
+})

@@ -19,3 +19,13 @@ clientMenu.addEventListener('change', function() {
     window.location.href = '../fechamento-clientes/fechamento-cliente.html'; 
   }
 });
+
+const controlMenu = document.getElementById('controlMenu');
+
+controlMenu.addEventListener('change', function() {
+  const selectedOption = this.value;
+
+  if (selectedOption == 'Lotes') {
+    window.location.href= '../lotes_estoque/index.html';
+  }
+})
