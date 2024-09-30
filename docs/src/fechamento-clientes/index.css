@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #d0e3f2, #3582d4);
+}
+
+.container {
+    margin: 150px auto; 
+}
+
+.search-box {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    width: 95%; 
+    position: relative;
+}
+
+.search-input {
+    flex: 1; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.cliente {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#month-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nome-cliente {
+    background: white;
+}
+
+.nome-cliente input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dropdown ul li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown ul li:hover {
+    background-color: #eee;
+}
+
+footer {
+    position: absolute;
+    bottom: 15%;
+    font-size: 14px;
+    color: white;
+}
