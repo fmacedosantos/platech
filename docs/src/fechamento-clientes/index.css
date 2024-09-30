@@ -192,6 +192,7 @@ footer {
     color: #898989;
     cursor: pointer;
     margin-right: 50px;
+    margin-left: 35px;
     position: fixed;
     top: 60px;
   }
