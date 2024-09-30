@@ -14,6 +14,10 @@ clientMenu.addEventListener('change', function() {
   if (selectedOption == 'Cadastrar Clientes') { 
     window.location.href = '../cadastro-cliente/cadastro-cliente.html'; 
   }
+
+  if (selectedOption == 'Fechamento') {
+    window.location.href = '../fechamento-clientes/fechamento-cliente.html'; 
+  }
 });
 
 const homeButton = document.getElementById('homeButton');
