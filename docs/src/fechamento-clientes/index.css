@@ -225,7 +225,15 @@ footer {
     }
   
     .icone {
-      width: 120px;
+      display: none;
+    }
+
+    .search-box{
+      width: 94%;
+    }
+
+    .nome-cliente input {
+      width: 250px;
     }
   
     .icone-profile {
