@@ -16,6 +16,10 @@ body {
     overflow-x: hidden;
 }
 
+#homeButton {
+  font-size: 13px;
+}
+
 .header {
     display: flex;
     padding: 20px;
