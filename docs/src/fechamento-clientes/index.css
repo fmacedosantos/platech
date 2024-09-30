@@ -9,6 +9,43 @@ body {
     background: linear-gradient(to bottom, #d0e3f2, #3582d4);
 }
 
+.header {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icone {
+  width: 150px;
+  height: auto;
+  margin-right: auto;
+  margin-left: 60px;
+}
+
+.container_image_profile {
+    display: flex;
+    align-items: center;
+}
+
+.icone-profile {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .container {
     margin: 150px auto; 
 }
