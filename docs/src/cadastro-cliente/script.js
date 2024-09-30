@@ -15,3 +15,9 @@ clientMenu.addEventListener('change', function() {
     window.location.href = '../cadastro-cliente/cadastro-cliente.html'; 
   }
 });
+
+const homeButton = document.getElementById('homeButton');
+
+homeButton.addEventListener('click', () => {
+  window.location.href = '../pagina-inicial/pagina-inicial.html'
+})
