@@ -1,13 +1,23 @@
 <?php
-$host = 'localhost'; 
-$dbname = 'platech'; // mudar esse nome caso o seu banco seja diferente
-$username = 'root';
-$password = '';
+class Database {
+    public $conn;
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erro ao conectar ao banco de dados: " . $e->getMessage());
+    public function __construct() {
+        // Ajustar aqui conforme o seu banco de dados
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "platech";
+
+        $this->conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($this->conn->connect_error) {
+            die("Falha na conexão: " . $this->conn->connect_error);
+        }
+    }
+
+    public function close() {
+        $this->conn->close();
+    }
 }
 ?>
