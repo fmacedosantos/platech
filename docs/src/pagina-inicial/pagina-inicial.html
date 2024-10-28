@@ -75,13 +75,14 @@
                         <th>Data</th>
                     </tr>
                 </thead>
-                <tbody id="placasTableBody">
+                <tbody id="platesTableBody">
                 </tbody>
             </table>
         </div>
     </div>
 
     <script>
+        // Mudar aqui caso a sua api esteja rodando em um link diferente
         const apiUrl = 'http://localhost/api-platech/plates/fetch';
 
         async function fetchAndDisplayData() {
@@ -95,7 +96,7 @@
                 const data = await response.json();
 
                 if (data.success && data.data) {
-                    const tableBody = document.getElementById('placasTableBody');
+                    const tableBody = document.getElementById('platesTableBody');
 
                     data.data.forEach(plate => {
                         const row = document.createElement('tr');
