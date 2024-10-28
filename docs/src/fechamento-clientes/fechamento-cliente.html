@@ -1,98 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fechamento de Clientes</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="navbar">
-          <div class="navbar-content">
-            <div class="navbar-content-title">
-              <h1>Platech</h1>
-            </div>
-            <div class="nav-item">
-              <select class="nav-item-select">
-                <option>Consultar placas</option>
-              </select>
-            </div>
-            <div class="nav-item">
-              <select class="nav-item-select" id="clientMenu">
-                <option>Clientes</option>
-                <option>Cadastrar Clientes</option>
-                <option>Fechamento</option>
-              </select>
-            </div>
-            <div class="nav-item">
-              <select class="nav-item-select" id="controlMenu">
-                <option>Controle de material</option>
-                <option>Lotes</option>
-              </select>
-            </div>
-            <div class="nav-item">
-              <button id="homeButton" class="nav-item-select">Página Inicial</button>
-            </div>
+      <div class="navbar">
+        <div class="navbar-content">
+          <div class="navbar-content-title">
+            <h1>Platech</h1>
           </div>
-        </div>
-        <div class="header-content">
-          <div>
-            <button class="menu-toggle">
-              <span class="hamburger"></span>
-              <span class="hamburger"></span>
-              <span class="hamburger"></span>
+          <div class="nav-item">
+            <select class="nav-item-select" id="placMenu">
+              <option>Registrar placas</option>
+              <option>Consultar placas</option>
+            </select>
+          </div>
+          <div class="nav-item">
+            <select class="nav-item-select" id="clientMenu">
+              <option>Clientes</option>
+              <option>Cadastrar Clientes</option>
+              <option>Fechamento</option>
+            </select>
+          </div>
+          <div class="nav-item">
+            <select class="nav-item-select" id="controlMenu">
+              <option>Controle de material</option>
+              <option>Lotes</option>
+            </select>
+          </div>
+          <div class="nav-item">
+            <button id="homeButton" class="nav-item-select">
+              Página Inicial
             </button>
           </div>
-
-          <img
-            class="icone"
-            src="../../assets/pictures/platech-icon.png"
-            alt="logo da empresa platech"
-          />
-
-          <div class="container_image_profile">
-            <img
-              class="icone-profile"
-              src="../../assets/pictures/profile-image.png"
-              alt="imagem do usuário logado"
-            />
-          </div>
         </div>
-      </header>
+      </div>
+      <div class="header-content">
+        <div>
+          <button class="menu-toggle">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+          </button>
+        </div>
 
-      <div class="overlay"></div>
+        <img
+          class="icone"
+          src="../../assets/pictures/platech-icon.png"
+          alt="logo da empresa platech"
+        />
+
+        <div class="container_image_profile">
+          <img
+            class="icone-profile"
+            src="../../assets/pictures/profile-image.png"
+            alt="imagem do usuário logado"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="overlay"></div>
 
     <div class="container">
-        <div class="search-box">
-            <div class="search-input">
-                <label for="cliente" class="cliente">Nome do Cliente:</label>
-                <button id="month-button">📅</button>
-            </div>
+      <div class="search-box">
+        <div class="search-input">
+          <label for="cliente" class="cliente">Nome do Cliente:</label>
+          <button id="month-button">📅</button>
         </div>
-        <div id="month-selector" class="dropdown">
-            <ul>
-                <li>Janeiro</li>
-                <li>Fevereiro</li>
-                <li>Março</li>
-                <li>Abril</li>
-                <li>Maio</li>
-                <li>Junho</li>
-                <li>Julho</li>
-                <li>Agosto</li>
-                <li>Setembro</li>
-                <li>Outubro</li>
-                <li>Novembro</li>
-                <li>Dezembro</li>
-            </ul>
-        </div>
-        <div class="nome-cliente">
-            <input type="text" id="cliente" placeholder="NOME DO CLIENTE">
-            <button type="button">🔍</button>
-        </div>
-        
+      </div>
+      <div id="month-selector" class="dropdown">
+        <ul>
+          <li>Janeiro</li>
+          <li>Fevereiro</li>
+          <li>Março</li>
+          <li>Abril</li>
+          <li>Maio</li>
+          <li>Junho</li>
+          <li>Julho</li>
+          <li>Agosto</li>
+          <li>Setembro</li>
+          <li>Outubro</li>
+          <li>Novembro</li>
+          <li>Dezembro</li>
+        </ul>
+      </div>
+      <div class="nome-cliente">
+        <input type="text" id="cliente" placeholder="NOME DO CLIENTE" />
+        <button type="button">🔍</button>
+      </div>
     </div>
-<footer > Fechamento do mês </footer>
-<script src="./script.js"></script>
-</body>
+    <footer>Fechamento do mês</footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
