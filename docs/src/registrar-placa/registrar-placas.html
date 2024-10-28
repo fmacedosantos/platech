@@ -98,11 +98,54 @@
             <img class="icone" src="../../assets/pictures/platech-icon.png" alt="logo da empresa platech"/>
           </div>
           <div class="form-group">
-            <button type="button" id="saveButton">Salvar</button>
+            <button type="button" id="saveButton" onclick="submitForm()">Salvar</button>
           </div>
         </form>
       </div>
     </div>
+    <script>
+      async function submitForm() {
+        const placa = document.getElementById('placa').value;
+        const solicitante = document.getElementById('solicitante').value;
+        const tipo = document.getElementById('tipo').value;
+        const valor = parseFloat(document.getElementById('valor').value) || 0;
+        const formaPagamento = document.getElementById('formaPagamento').value;
+
+        const data = {
+          plate: placa,
+          applicant: solicitante,
+          type: tipo,
+          value: valor,
+          paymentMethod: formaPagamento
+        };
+
+        try {
+          // Mudar aqui caso a sua api esteja rodando em um link diferente
+          const response = await fetch('http://localhost/api-platech/plates/create', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+
+          const result = await response.json();
+          console.log("API Response:", result);
+
+          if (result.success = true) {
+            alert("Placa registrada com sucesso!");
+          } else {
+            alert("Erro ao registrar placa: " + (result.message || "Tente novamente"));
+          }
+
+          document.getElementById('registerForm').reset();
+
+        } catch (error) {
+          console.error("Erro na requisição:", error);
+          alert("Falha ao conectar com a API.");
+        }
+      }
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>
