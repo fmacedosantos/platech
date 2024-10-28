@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platech</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="navbar">
+              <div class="navbar-content">
+                <div class="navbar-content-title">
+                  <h1>Platech</h1>
+                </div>
+                <div class="nav-item">
+                  <select class="nav-item-select" id="placMenu">
+                    <option>Consultar placas</option>
+                    <option>Registrar placas</option>
+                  </select>
+                </div>
+                <div class="nav-item">
+                  <select class="nav-item-select" id="clientMenu">
+                    <option>Clientes</option>
+                    <option>Cadastrar Clientes</option>
+                    <option>Fechamento</option>
+                  </select>
+                </div>
+                <div class="nav-item">
+                  <select class="nav-item-select" id="controlMenu">
+                    <option>Controle de material</option>
+                    <option>Lotes</option>
+                  </select>
+                </div>
+                <div class="nav-item">
+                  <button id="homeButton" class="nav-item-select button-center">
+                    Página Inicial
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="header-content">
+              <div>
+                <button class="menu-toggle">
+                  <span class="hamburger"></span>
+                  <span class="hamburger"></span>
+                  <span class="hamburger"></span>
+                </button>
+              </div>
+      
+              <div class="container_image_profile">
+                <img
+                  class="icone-profile"
+                  src="../../assets/pictures/profile-image.png"
+                  alt="imagem do usuário logado"
+                />
+              </div>
+            </div>
+          </header>
+
+        <div class="overlay"></div>
+
+        <div class="square">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Solicitante</th>
+                        <th>Tipo</th>
+                        <th>Placa</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody id="platesTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Mudar aqui caso a sua api esteja rodando em um link diferente
+        const apiUrl = 'http://localhost/api-platech/plates/fetch';
+
+        async function fetchAndDisplayData() {
+            try {
+                const response = await fetch(apiUrl);
+                
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar dados da API');
+                }
+
+                const data = await response.json();
+
+                if (data.success && data.data) {
+                    const tableBody = document.getElementById('platesTableBody');
+
+                    data.data.forEach(plate => {
+                        const row = document.createElement('tr');
+                        
+                        row.innerHTML = `
+                            <td>${plate.applicant}</td>
+                            <td>${plate.type}</td>
+                            <td>${plate.plate}</td>
+                            <td>${plate.date}</td>
+                        `;
+
+                        tableBody.appendChild(row);
+                    });
+                } else {
+                    alert("Nenhum dado encontrado.");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Erro ao conectar com a API.");
+            }
+        }
+
+        window.onload = fetchAndDisplayData;
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
