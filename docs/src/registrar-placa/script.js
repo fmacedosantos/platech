@@ -1,19 +1,3 @@
-const selectBox = document.querySelector(".select-box");
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
-const optionsList = document.querySelectorAll(".option");
-
-selectBox.addEventListener("click", () => {
-  selectBox.classList.toggle("active");
-});
-
-optionsList.forEach((option) => {
-  option.addEventListener("click", () => {
-    selected.innerHTML = option.innerHTML;
-    selectBox.classList.remove("active");
-  });
-});
-
 document.querySelector(".menu-toggle").addEventListener("click", function () {
   document.body.classList.toggle("navbar-open");
 });
@@ -36,13 +20,13 @@ clientMenu.addEventListener("change", function () {
   }
 });
 
-const controlMenu = document.getElementById("controlMenu");
+const placMenu = document.getElementById("placMenu");
 
-controlMenu.addEventListener("change", function () {
+placMenu.addEventListener("change", function () {
   const selectedOption = this.value;
 
-  if (selectedOption == "Lotes") {
-    window.location.href = "../lotes_estoque/index.html";
+  if (selectedOption == "Registrar placas") {
+    window.location.href = "../registrar-placa/registrar-placas.html";
   }
 });
 
@@ -52,12 +36,12 @@ homeButton.addEventListener("click", () => {
   window.location.href = "../pagina-inicial/pagina-inicial.html";
 });
 
-const placMenu = document.getElementById("placMenu");
+const controlMenu = document.getElementById("controlMenu");
 
-placMenu.addEventListener("change", function () {
+controlMenu.addEventListener("change", function () {
   const selectedOption = this.value;
 
-  if (selectedOption == "Registrar placas") {
-    window.location.href = "../registrar-placa/registrar-placas.html";
+  if (selectedOption == "Lotes") {
+    window.location.href = "../lotes_estoque/index.html";
   }
 });

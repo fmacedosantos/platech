@@ -1,119 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cadastro de Novo Cliente">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cadastro de Novo Cliente" />
     <title>Novo Cliente - Cadastro</title>
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    <link rel="stylesheet" href="index.css">
-</head>
-<header class="header">
-    <div class="header-content">
-      <img class="icone" src="../../assets/pictures/platech-icon.png" alt="logo da empresa platech">
-      <div class="container_image_profile">
-        <img class="icone-profile" src="../../assets/pictures/profile-image.png" alt="imagem do usuário logado">
-      </div>
-    </div>
-</header>
-<body>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
     <div class="container">
-
-        <header class="header">
-            <div class="navbar">
-              <div class="navbar-content">
-                <div class="navbar-content-title">
-                  <h1>Platech</h1>
-                </div>
-                <div class="nav-item">
-                  <select class="nav-item-select">
-                    <option>Consultar placas</option>
-                  </select>
-                </div>
-                <div class="nav-item">
-                  <select class="nav-item-select" id="clientMenu">
-                    <option>Clientes</option>
-                    <option>Cadastrar Clientes</option>
-                    <option>Fechamento</option>
-                  </select>
-                </div>
-                <div class="nav-item">
-                  <select class="nav-item-select" id="controlMenu">
-                    <option>Controle de material</option>
-                    <option>Lotes</option>
-                  </select>
-                </div>
-                <div class="nav-item">
-                  <button id="homeButton" class="nav-item-select button-center">Página Inicial</button>
-                </div>
-              </div>
+      <header class="header">
+        <div class="navbar">
+          <div class="navbar-content">
+            <div class="navbar-content-title">
+              <h1>Platech</h1>
             </div>
-            <div class="header-content">
-              <div>
-                <button class="menu-toggle">
-                  <span class="hamburger"></span>
-                  <span class="hamburger"></span>
-                  <span class="hamburger"></span>
-                </button>
-              </div>
-    
-              <img
-                class="icone"
-                src="../../assets/pictures/platech-icon.png"
-                alt="logo da empresa platech"
-              />
-    
-              <div class="container_image_profile">
-                <img
-                  class="icone-profile"
-                  src="../../assets/pictures/profile-image.png"
-                  alt="imagem do usuário logado"
-                />
-              </div>
+            <div class="nav-item">
+              <select class="nav-item-select" id="placMenu">
+                <option>Registrar placas</option>
+                <option>Consultar placas</option>
+              </select>
             </div>
-          </header>
-    
-          <div class="overlay"></div>
-
-        <div>
-
+            <div class="nav-item">
+              <select class="nav-item-select" id="clientMenu">
+                <option>Clientes</option>
+                <option>Cadastrar Clientes</option>
+                <option>Fechamento</option>
+              </select>
+            </div>
+            <div class="nav-item">
+              <select class="nav-item-select" id="controlMenu">
+                <option>Controle de material</option>
+                <option>Lotes</option>
+              </select>
+            </div>
+            <div class="nav-item">
+              <button id="homeButton" class="nav-item-select button-center">
+                Página Inicial
+              </button>
+            </div>
+          </div>
         </div>
-        <h1>Novo Cliente</h1>
-        <p id="description">Preencha o formulário para salvar um novo cliente.</p>
-        <form class="form">
-            <div class="form-group">
-                <label for="nomeCliente">Nome cliente</label>
-                <input type="text" id="nomeCliente" name="nomeCliente" placeholder="Digite o nome do cliente" required>
-            </div>
-            <div class="form-group">
-                <label for="empresa">Empresa</label>
-                <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
-            </div>
-            <div class="form-group">
-                <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="Digite o telefone" required>
-            </div>
-            <div class="form-group">
-                <label for="tipoCadastro">Tipo de cadastro</label>
-                <select id="tipoCadastro" name="tipoCadastro">
-                    <option value="despachante">Despachante</option>
-                    <option value="concessionaria">Concessionária</option>
-                    <option value="particular">Particular</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="valorCarro">Valor unitário da placa de CARRO</label>
-                <input type="number" id="valorCarro" name="valorCarro" placeholder="Digite o valor">
-            </div>
-            <div class="form-group">
-                <label for="valorMoto">Valor unitário da placa de MOTO</label>
-                <input type="number" id="valorMoto" name="valorMoto" placeholder="Digite o valor">
-            </div>
-            <div class="form-group">
-                <button type="submit">Salvar</button>
-            </div>
-        </form>
+        <div class="header-content">
+          <div>
+            <button class="menu-toggle">
+              <span class="hamburger"></span>
+              <span class="hamburger"></span>
+              <span class="hamburger"></span>
+            </button>
+          </div>
+
+          <img
+            class="icone"
+            src="../../assets/pictures/platech-icon.png"
+            alt="logo da empresa platech"
+          />
+
+          <div class="container_image_profile">
+            <img
+              class="icone-profile"
+              src="../../assets/pictures/profile-image.png"
+              alt="imagem do usuário logado"
+            />
+          </div>
+        </div>
+      </header>
+
+      <div class="overlay"></div>
+
+      <div></div>
+      <h1>Novo Cliente</h1>
+      <p id="description">Preencha o formulário para salvar um novo cliente.</p>
+      <form class="form">
+        <div class="form-group">
+          <label for="nomeCliente">Nome cliente</label>
+          <input
+            type="text"
+            id="nomeCliente"
+            name="nomeCliente"
+            placeholder="Digite o nome do cliente"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input
+            type="text"
+            id="empresa"
+            name="empresa"
+            placeholder="Digite o nome da empresa"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="Digite o telefone"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="tipoCadastro">Tipo de cadastro</label>
+          <select id="tipoCadastro" name="tipoCadastro">
+            <option value="despachante">Despachante</option>
+            <option value="concessionaria">Concessionária</option>
+            <option value="particular">Particular</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="valorCarro">Valor unitário da placa de CARRO</label>
+          <input
+            type="number"
+            id="valorCarro"
+            name="valorCarro"
+            placeholder="Digite o valor"
+          />
+        </div>
+        <div class="form-group">
+          <label for="valorMoto">Valor unitário da placa de MOTO</label>
+          <input
+            type="number"
+            id="valorMoto"
+            name="valorMoto"
+            placeholder="Digite o valor"
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit">Salvar</button>
+        </div>
+      </form>
     </div>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
