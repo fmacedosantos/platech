@@ -18,8 +18,8 @@
           </div>
           <div class="nav-item">
             <select class="nav-item-select" id="placMenu">
-              <option>Registrar placas</option>
               <option>Consultar placas</option>
+              <option>Registrar placas</option>
             </select>
           </div>
           <div class="nav-item">
@@ -68,60 +68,37 @@
       </div>
 
       <div class="container">
-        <form class="form">
+        <form id="registerForm" class="form">
           <div class="form-group">
             <label for="placa">Placa</label>
-            <input
-              type="text"
-              id="placa"
-              name="placa"
-              placeholder="Digite a placa"
-              required
-            />
+            <input type="text" id="placa" name="placa" placeholder="Digite a placa" required />
           </div>
           <div class="form-group">
             <label for="solicitante">Solicitante</label>
-            <input
-              type="text"
-              id="solicitante"
-              name="solicitante"
-              placeholder="Digite o solicitante"
-              required
-            />
+            <input type="text" id="solicitante" name="solicitante" placeholder="Digite o solicitante" required />
           </div>
           <div class="form-group">
             <label for="tipo">Tipo</label>
-            <input
-              type="tipo"
-              id="tipo"
-              name="tipo"
-              placeholder="Digite o tipo"
-              required
-            />
+            <input type="text" id="tipo" name="tipo" placeholder="Digite o tipo" required />
           </div>
           <div class="form-group">
             <label for="valor">Valor</label>
-            <input
-              type="number"
-              id="valor"
-              name="valor"
-              placeholder="Digite o valor"
-            />
+            <input type="number" id="valor" name="valor" placeholder="Digite o valor" step="0.01" />
           </div>
           <div class="form-group">
             <label for="formaPagamento">Forma de pagamento</label>
             <select id="formaPagamento" name="formaPagamento">
               <option value="pix">Pix</option>
-              <option value="credito">Crédito</option>
+              <option value="credito">Cartão de crédito</option>
+              <option value="debito">Cartão de débito</option>
               <option value="dinheiro">Dinheiro</option>
             </select>
           </div>
           <div class="form-group">
-            <img
-              class="icone"
-              src="../../assets/pictures/platech-icon.png"
-              alt="logo da empresa platech"
-            />
+            <img class="icone" src="../../assets/pictures/platech-icon.png" alt="logo da empresa platech"/>
+          </div>
+          <div class="form-group">
+            <button type="button" id="saveButton">Salvar</button>
           </div>
         </form>
       </div>
