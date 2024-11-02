@@ -20,16 +20,6 @@ clientMenu.addEventListener("change", function () {
   }
 });
 
-const placMenu = document.getElementById("placMenu");
-
-placMenu.addEventListener("change", function () {
-  const selectedOption = this.value;
-
-  if (selectedOption == "Registrar placas") {
-    window.location.href = "../registrar-placa/registrar-placas.html";
-  }
-});
-
 const homeButton = document.getElementById("homeButton");
 
 homeButton.addEventListener("click", () => {
@@ -43,5 +33,15 @@ controlMenu.addEventListener("change", function () {
 
   if (selectedOption == "Lotes") {
     window.location.href = "../lotes_estoque/index.html";
+  }
+});
+
+const placMenu = document.getElementById("placMenu");
+
+placMenu.addEventListener("change", function () {
+  const selectedOption = this.value;
+
+  if (selectedOption == "Registrar placas") {
+    window.location.href = "../registrar-placa/registrar-placas.html";
   }
 });
