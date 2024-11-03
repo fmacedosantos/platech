@@ -1,19 +1,3 @@
-const selectBox = document.querySelector(".select-box");
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
-const optionsList = document.querySelectorAll(".option");
-
-selectBox.addEventListener("click", () => {
-  selectBox.classList.toggle("active");
-});
-
-optionsList.forEach((option) => {
-  option.addEventListener("click", () => {
-    selected.innerHTML = option.innerHTML;
-    selectBox.classList.remove("active");
-  });
-});
-
 document.querySelector(".menu-toggle").addEventListener("click", function () {
   document.body.classList.toggle("navbar-open");
 });
@@ -31,25 +15,13 @@ clientMenu.addEventListener("change", function () {
     window.location.href = "../cadastro-cliente/cadastro-cliente.html";
   }
 
+  if (selectedOption == "Listar Clientes") {
+    window.location.href = "../listar-clientes/listar-clientes.html";
+  }
+
   if (selectedOption == "Fechamento") {
     window.location.href = "../fechamento-clientes/fechamento-cliente.html";
   }
-});
-
-const controlMenu = document.getElementById("controlMenu");
-
-controlMenu.addEventListener("change", function () {
-  const selectedOption = this.value;
-
-  if (selectedOption == "Lotes") {
-    window.location.href = "../lotes_estoque/index.html";
-  }
-});
-
-const homeButton = document.getElementById("homeButton");
-
-homeButton.addEventListener("click", () => {
-  window.location.href = "../pagina-inicial/pagina-inicial.html";
 });
 
 const placMenu = document.getElementById("placMenu");
@@ -59,5 +31,21 @@ placMenu.addEventListener("change", function () {
 
   if (selectedOption == "Registrar placas") {
     window.location.href = "../registrar-placa/registrar-placas.html";
+  }
+});
+
+const homeButton = document.getElementById("homeButton");
+
+homeButton.addEventListener("click", () => {
+  window.location.href = "../pagina-inicial/pagina-inicial.html";
+});
+
+const controlMenu = document.getElementById("controlMenu");
+
+controlMenu.addEventListener("change", function () {
+  const selectedOption = this.value;
+
+  if (selectedOption == "Lotes") {
+    window.location.href = "../lotes_estoque/index.html";
   }
 });

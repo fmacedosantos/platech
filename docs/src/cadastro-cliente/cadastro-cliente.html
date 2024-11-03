@@ -26,6 +26,7 @@
           <div class="nav-item">
             <select class="nav-item-select" id="clientMenu">
               <option>Clientes</option>
+              <option>Listar Clientes</option>
               <option>Cadastrar Clientes</option>
               <option>Fechamento</option>
             </select>
@@ -51,16 +52,16 @@
             <span class="hamburger"></span>
           </button>
         </div>
-
-        <div class="container_image_profile">
-          <img
-            class="icone-profile"
-            src="../../assets/pictures/profile-image.png"
-            alt="imagem do usuário logado"
-          />
+  
+          <div class="container_image_profile">
+            <img
+              class="icone-profile"
+              src="../../assets/pictures/profile-image.png"
+              alt="imagem do usuário logado"
+            />
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
     <div class="overlay"></div>
 
@@ -103,7 +104,25 @@
 
     <p id="responseMessage"></p>
   </div>
+  <script>const telefone = document.getElementById('telefone');
 
+    telefone.addEventListener('keypress', (event) => {
+      let telefoneLength = telefone.value.replace(/\D/g, '').length;
+  
+      if (telefoneLength >= 11) {
+        event.preventDefault();
+        return;
+      }
+  
+      if (telefone.value.length === 0) {
+        telefone.value += '(';
+      } else if (telefone.value.length === 3) {
+        telefone.value += ')';
+      } else if (telefone.value.length === 8) {
+        telefone.value += '-';
+      }
+    });
+    </script>
   <script src="./registerClient.js"></script>
   <script src="./script.js"></script>
 </body>
