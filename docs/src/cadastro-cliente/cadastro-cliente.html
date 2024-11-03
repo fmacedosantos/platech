@@ -104,7 +104,25 @@
 
     <p id="responseMessage"></p>
   </div>
+  <script>const telefone = document.getElementById('telefone');
 
+    telefone.addEventListener('keypress', (event) => {
+      let telefoneLength = telefone.value.replace(/\D/g, '').length;
+  
+      if (telefoneLength >= 11) {
+        event.preventDefault();
+        return;
+      }
+  
+      if (telefone.value.length === 0) {
+        telefone.value += '(';
+      } else if (telefone.value.length === 3) {
+        telefone.value += ')';
+      } else if (telefone.value.length === 8) {
+        telefone.value += '-';
+      }
+    });
+    </script>
   <script src="./registerClient.js"></script>
   <script src="./script.js"></script>
 </body>
