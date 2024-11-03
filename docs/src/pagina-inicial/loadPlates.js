@@ -1,5 +1,17 @@
 // Mudar aqui caso a sua api esteja rodando em um link diferente
 const apiUrl = 'http://localhost/api-platech/plates/fetch';
+
+// Função para verificar autenticação
+function checkAuthentication() {
+    const token = localStorage.getItem('authToken');
+    
+    if (!token) {
+      localStorage.setItem('loginMessage', 'Por favor faça o login para acessar o sistema');
+      window.location.href = "../../index.html";
+      return false;
+    }
+    return true;
+  }
     
 async function fetchAndDisplayData() {
     try {
@@ -35,16 +47,7 @@ async function fetchAndDisplayData() {
     }
 }
 
-window.onload = fetchAndDisplayData;
-
-// Confirma se o usuario esta logado
-function checkAuthentication() {
-    const token = localStorage.getItem('authToken');
-  
-    if (!token) {
-      localStorage.setItem('loginMessage', 'Por favor faça o login para acessar o sistema');
-      window.location.href = "../../index.html";
-    }
+// Execução imediata da verificação de autenticação e do carregamento de dados
+if (checkAuthentication()) {
+    fetchAndDisplayData();
   }
-  
-  window.onload = checkAuthentication;
