@@ -15,8 +15,22 @@ clientMenu.addEventListener("change", function () {
     window.location.href = "../cadastro-cliente/cadastro-cliente.html";
   }
 
+  if (selectedOption == "Listar Clientes") {
+    window.location.href = "../listar-clientes/listar-clientes.html";
+  }
+
   if (selectedOption == "Fechamento") {
     window.location.href = "../fechamento-clientes/fechamento-cliente.html";
+  }
+});
+
+const placMenu = document.getElementById("placMenu");
+
+placMenu.addEventListener("change", function () {
+  const selectedOption = this.value;
+
+  if (selectedOption == "Registrar placas") {
+    window.location.href = "../registrar-placa/registrar-placas.html";
   }
 });
 
@@ -35,14 +49,3 @@ controlMenu.addEventListener("change", function () {
     window.location.href = "../lotes_estoque/index.html";
   }
 });
-
-const placMenu = document.getElementById("placMenu");
-
-placMenu.addEventListener("change", function () {
-  const selectedOption = this.value;
-
-  if (selectedOption == "Registrar placas") {
-    window.location.href = "../registrar-placa/registrar-placas.html";
-  }
-});
-

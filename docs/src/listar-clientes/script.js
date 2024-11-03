@@ -50,15 +50,40 @@ controlMenu.addEventListener("change", function () {
   }
 });
 
-// Confirma se o usuario esta logado
-function checkAuthentication() {
-  const token = localStorage.getItem('authToken');
+// Lista os clientes
+async function fetchAndDisplayClients() {
+  try {
+      const response = await fetch('http://localhost/api-platech/clients/fetch');
+      if (!response.ok) {
+          throw new Error('Erro ao buscar dados da API');
+      }
 
-  if (!token) {
-    localStorage.setItem('loginMessage', 'Por favor faça o login para acessar o sistema');
-    window.location.href = "../../index.html";
+      const data = await response.json();
+      console.log("API Response:", data);
+
+      if (data.success && data.data) {
+          const tableBody = document.getElementById('platesTableBody');
+          tableBody.innerHTML = "";
+
+          data.data.forEach(client => {
+              const row = document.createElement('tr');
+
+              row.innerHTML = `
+                  <td>${client.applicant}</td>
+                  <td>${client.company ? client.company : 'Particular'}</td>
+                  <td>${client.phone}</td>
+              `;
+
+              tableBody.appendChild(row);
+          });
+      } else {
+          alert("Nenhum dado encontrado.");
+      }
+  } catch (error) {
+      console.error("Erro na requisição:", error);
+      alert("Erro ao conectar com a API.");
   }
 }
 
-window.onload = checkAuthentication;
 
+window.onload = fetchAndDisplayClients;
