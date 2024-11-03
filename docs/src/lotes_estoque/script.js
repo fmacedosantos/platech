@@ -26,14 +26,6 @@ clientMenu.addEventListener("change", function () {
 
 const placMenu = document.getElementById("placMenu");
 
-placMenu.addEventListener("change", function () {
-  const selectedOption = this.value;
-
-  if (selectedOption == "Registrar placas") {
-    window.location.href = "../registrar-placa/registrar-placas.html";
-  }
-});
-
 const homeButton = document.getElementById("homeButton");
 
 homeButton.addEventListener("click", () => {
@@ -49,3 +41,23 @@ controlMenu.addEventListener("change", function () {
     window.location.href = "../lotes_estoque/index.html";
   }
 });
+
+placMenu.addEventListener("change", function () {
+  const selectedOption = this.value;
+
+  if (selectedOption == "Registrar placas") {
+    window.location.href = "../registrar-placa/registrar-placas.html";
+  }
+});
+
+// Confirma se o usuario esta logado
+function checkAuthentication() {
+  const token = localStorage.getItem('authToken');
+
+  if (!token) {
+    localStorage.setItem('loginMessage', 'Por favor faça o login para acessar o sistema');
+    window.location.href = "../../index.html";
+  }
+}
+
+window.onload = checkAuthentication;
