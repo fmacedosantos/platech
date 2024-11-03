@@ -46,6 +46,7 @@ placMenu.addEventListener("change", function () {
   }
 });
 
+// Confirma se o usuario esta logado
 function checkAuthentication() {
   const token = localStorage.getItem('authToken');
 
