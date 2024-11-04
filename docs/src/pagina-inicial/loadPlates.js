@@ -1,5 +1,5 @@
 // Mudar aqui caso a sua api esteja rodando em um link diferente
-const apiUrl = 'http://localhost/api-platech/plates/fetch';
+const apiUrl = 'https://platech-b2bf5ba2cfc9.herokuapp.com/plates/fetch';
 
 // Função para verificar autenticação
 function checkAuthentication() {

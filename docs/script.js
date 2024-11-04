@@ -12,7 +12,7 @@ getElement.addEventListener("submit", async function (event) {
   };
 
   try {
-    const response = await fetch('http://localhost/api-platech/users/login', {
+    const response = await fetch('https://platech-b2bf5ba2cfc9.herokuapp.com/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -23,7 +23,6 @@ getElement.addEventListener("submit", async function (event) {
     const result = await response.json();
 
     if (result.success) {
-      // Salva o JWT no localStorage
       localStorage.setItem('authToken', result.jwt);
       alert("Login realizado com sucesso!");
       window.location.href = "src/pagina-inicial/pagina-inicial.html";
@@ -36,13 +35,10 @@ getElement.addEventListener("submit", async function (event) {
   }
 });
 
-// Verifica se há uma mensagem de login no localStorage
 const loginMessage = localStorage.getItem('loginMessage');
 
 if (loginMessage) {
-  // Exibe a mensagem para o usuário
   alert(loginMessage);
-  // Remove a mensagem do localStorage
   localStorage.removeItem('loginMessage');
 }
 

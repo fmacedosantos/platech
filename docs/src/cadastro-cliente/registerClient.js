@@ -10,7 +10,7 @@ async function submitForm() {
 
     try {
       // Mudar aqui caso a sua api esteja rodando em um link diferente
-      const response = await fetch('http://localhost/api-platech/clients/create', {
+      const response = await fetch('https://platech-b2bf5ba2cfc9.herokuapp.com/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
