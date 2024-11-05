@@ -1,6 +1,6 @@
 async function loadClients() {
     try {
-      const response = await fetch('http://localhost/api-platech/clients/fetch');
+      const response = await fetch('https://platech-b2bf5ba2cfc9.herokuapp.com/clients/fetch');
       const result = await response.json();
       if (result.success && result.data) {
         const solicitanteSelect = document.getElementById('solicitante');
