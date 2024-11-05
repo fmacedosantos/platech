@@ -12,7 +12,7 @@ async function submitForm() {
       paymentMethod: formaPagamento
     };
     try {
-      const response = await fetch('http://localhost/api-platech/plates/create', {
+      const response = await fetch('https://platech-b2bf5ba2cfc9.herokuapp.com/plates/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
