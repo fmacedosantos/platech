@@ -23,7 +23,7 @@ async function submitForm() {
     const result = await response.json();
     console.log("API Response:", result);
 
-    if (result.success) {
+    if (result.success = true) {
       feedback.textContent = "Cliente registrado com sucesso!";
       feedback.style.color = "green";
     } else {
