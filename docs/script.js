@@ -5,6 +5,7 @@ getElement.addEventListener("submit", async function (event) {
 
   const cpf = document.getElementById('cpf').value;
   const password = document.getElementById('senha').value;
+  const feedback = document.getElementById('loginFeedback');
 
   const data = {
     cpf,
@@ -22,26 +23,23 @@ getElement.addEventListener("submit", async function (event) {
 
     const result = await response.json();
 
-    if (result.success) {
+    if (response.ok && result.success) {
       localStorage.setItem('authToken', result.jwt);
-      alert("Login realizado com sucesso!");
-      window.location.href = "src/pagina-inicial/pagina-inicial.html";
+      feedback.textContent = "Login realizado com sucesso!";
+      feedback.style.color = "green";
+      setTimeout(() => {
+        window.location.href = "src/pagina-inicial/pagina-inicial.html";
+      }, 2000);
     } else {
-      alert(result.message || "CPF ou senha incorretos.");
+      feedback.textContent = result.message || "CPF ou senha incorretos.";
+      feedback.style.color = "red";
     }
   } catch (error) {
     console.error("Erro na requisição:", error);
-    alert("Falha ao conectar com a API.");
+    feedback.textContent = "Falha ao conectar com a API.";
+    feedback.style.color = "red";
   }
 });
-
-const loginMessage = localStorage.getItem('loginMessage');
-
-if (loginMessage) {
-  alert(loginMessage);
-  localStorage.removeItem('loginMessage');
-}
-
 
 const cpfInput = document.getElementById('cpf');
 cpfInput.addEventListener('keypress', () => {
