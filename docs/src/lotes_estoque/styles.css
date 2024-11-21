@@ -208,12 +208,11 @@ header {
 }
 
 .header-content {
-  .header-content {
     display: flex;
-    justify-content: space-between; 
     align-items: center;
+    justify-content: space-between; 
     width: 100%;
-}
+    padding: 10px 20px; 
 }
 
 
@@ -296,7 +295,7 @@ th {
     color: #898989;
     cursor: pointer;
     margin-right: 50px;
-    position: fixed;
+    
     top: 60px;
 }
 
