@@ -231,7 +231,7 @@ p {
 }
 
 .form-group {
-  flex: 1 1 45%; /* Flex-grow, flex-shrink e flex-basis para largura */
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
 }

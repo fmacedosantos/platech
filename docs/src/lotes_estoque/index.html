@@ -58,22 +58,17 @@
       <h1>Lotes em estoque</h1>
     </div>
     <div class="form-box">
-      <div class="custom-select">
-        <label class="select-box">
-          <input type="checkbox" class="options-toggle" />
-          <span class="selected">Selecionar tipo...</span>
-          <div class="options-container">
-            <div class="option">Carro Mercosul</div>
-            <div class="option">Moto Mercosul</div>
-            <div class="option">Carro Decorativa</div>
-            <div class="option">Moto Decorativa</div>
-            <div class="option">Carro Refletiva</div>
-            <div class="option">Moto Refletiva</div>
-          </div>
-        </label>
-      </div>
+      <select class="custom-select">
+        <option value="" disabled selected>Selecionar tipo...</option>
+        <option value="Carro Mercosul">Carro Mercosul</option>
+        <option value="Moto Mercosul">Moto Mercosul</option>
+        <option value="Carro Decorativa">Carro Decorativa</option>
+        <option value="Moto Decorativa">Moto Decorativa</option>
+        <option value="Carro Refletiva">Carro Refletiva</option>
+        <option value="Moto Refletiva">Moto Refletiva</option>
+      </select>
     </div>
-  </div>
+  </div>  
   <script src="script.js"></script>
 </body>
 </html>
