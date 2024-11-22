@@ -1,94 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
-    <title>Lotes em Estoque</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="navbar">
-        <div class="navbar-content">
-          <div class="navbar-content-title">
-            <h1>Platech</h1>
-          </div>
-          <div class="nav-item">
-            <select class="nav-item-select" id="placMenu">
-              <option>Consultar placas</option>
-              <option>Registrar placas</option>
-            </select>
-          </div>
-          <div class="nav-item">
-            <select class="nav-item-select" id="clientMenu">
-              <option>Clientes</option>
-              <option>Listar Clientes</option>
-              <option>Cadastrar Clientes</option>
-              <option>Fechamento</option>
-            </select>
-          </div>
-          <div class="nav-item">
-            <select class="nav-item-select" id="controlMenu">
-              <option>Controle de material</option>
-              <option>Lotes</option>
-            </select>
-          </div>
-          <div class="nav-item">
-            <button id="homeButton" class="nav-item-select button-center">
-              Página Inicial
-            </button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
+  <title>Lotes em Estoque</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="navbar">
+      <div class="navbar-content">
+        <div class="navbar-content-title">
+          <h1>Platech</h1>
         </div>
-      </div>
-      <div class="header-content">
-        <div>
-          <button class="menu-toggle">
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
-            <span class="hamburger"></span>
+        <div class="nav-item">
+          <select class="nav-item-select" id="placMenu">
+            <option value="">Consultar placas</option>
+            <option value="Registrar placas">Registrar placas</option>
+          </select>
+        </div>
+        <div class="nav-item">
+          <select class="nav-item-select" id="clientMenu">
+            <option value="">Clientes</option>
+            <option value="Listar Clientes">Listar Clientes</option>
+            <option value="Cadastrar Clientes">Cadastrar Clientes</option>
+            <option value="Fechamento">Fechamento</option>
+          </select>
+        </div>
+        <div class="nav-item">
+          <select class="nav-item-select" id="controlMenu">
+            <option value="">Controle de material</option>
+            <option value="Lotes">Lotes</option>
+          </select>
+        </div>
+        <div class="nav-item">
+          <button id="homeButton" class="nav-item-select button-center">
+            Página Inicial
           </button>
         </div>
-  
-          <div class="container_image_profile">
-            <img
-              class="icone-profile"
-              src="../../assets/pictures/profile-image.png"
-              alt="imagem do usuário logado"
-            />
-          </div>
-        </div>
-      </header>
-
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="title-box">
-        <h1>Lotes em estoque</h1>
-      </div>
-
-      <div class="form-box">
-        <div class="custom-select">
-          <div class="select-box">
-            <span class="selected">Selecionar tipo...</span>
-            <div class="options-container">
-              <div class="option">Carro Mercosul</div>
-              <div class="option">Moto Mercosul</div>
-              <div class="option">Carro Decorativa</div>
-              <div class="option">Moto Decorativa</div>
-              <div class="option">Carro Refletiva</div>
-              <div class="option">Moto Refletiva</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="actions">
-        <a href="#" class="alterar">Alterar</a>
-        <a href="#" class="cancelar">Cancelar</a>
-        <a href="#" class="registrar">Registrar</a>
       </div>
     </div>
-
-    <script src="script.js"></script>
-  </body>
+    <div class="header-content">
+      <button class="menu-toggle">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <div class="container_image_profile">
+        <img class="icone-profile" src="../../assets/pictures/profile-image.png" alt="imagem do usuário logado" />
+      </div>
+    </div>
+  </header>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="title-box">
+      <h1>Lotes em estoque</h1>
+    </div>
+    <div class="form-box">
+      <select class="custom-select">
+        <option value="" disabled selected>Selecionar tipo...</option>
+        <option value="Carro Mercosul">Carro Mercosul</option>
+        <option value="Moto Mercosul">Moto Mercosul</option>
+        <option value="Carro Decorativa">Carro Decorativa</option>
+        <option value="Moto Decorativa">Moto Decorativa</option>
+        <option value="Carro Refletiva">Carro Refletiva</option>
+        <option value="Moto Refletiva">Moto Refletiva</option>
+      </select>
+    </div>
+  </div>  
+  <script src="script.js"></script>
+</body>
 </html>
