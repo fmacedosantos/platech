@@ -51,7 +51,7 @@ placMenu.addEventListener("change", function () {
 });
 
 // Confirma se o usuario esta logado
-/* function checkAuthentication() {
+function checkAuthentication() {
   const token = localStorage.getItem('authToken');
 
   if (!token) {
@@ -61,4 +61,3 @@ placMenu.addEventListener("change", function () {
 }
 
 window.onload = checkAuthentication;
- */
