@@ -11,6 +11,73 @@
   .icone {
     display: none;
   }
+
+  .container_image_profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icone-profile {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .square {
+    width: 100%;
+    padding: 15px;
+    height: auto;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .navbar {
+    width: 250px;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s ease;
+    margin: 10px;
+  }
+
+  .navbar.open {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+  }
+
+  .hamburger {
+    background-color: #898989;
+    transition: background-color 0.3s ease;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 * {
@@ -72,7 +139,7 @@ body {
 }
 
 .square {
-  width: 1200px;
+  width: 100%;
   height: auto;
   background: var(--color-background-form);
   border-radius: 10px;
@@ -110,12 +177,6 @@ th::after {
   vertical-align: middle;
 }
 
-.refresh {
-  width: 23px;
-  height: 23px;
-  left: 50px;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -132,20 +193,15 @@ th::after {
   transition: left 0.3s ease;
 }
 
+.navbar.open {
+  left: 0;
+}
+
 .navbar-content-title {
   border-bottom: 1px solid;
   padding: 15px;
   margin-top: 16px;
   margin-bottom: 40px;
-  > h1 {
-    font-size: 25px;
-    font-weight: 400;
-    margin-left: 30px;
-  }
-}
-
-.navbar-open .navbar {
-  left: 0;
 }
 
 .nav-item {
@@ -188,7 +244,6 @@ th::after {
   margin: 5px 0;
   transition: background-color 0.3s ease;
 }
-
 
 .overlay {
   position: fixed;
