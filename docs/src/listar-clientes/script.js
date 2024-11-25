@@ -50,3 +50,15 @@ controlMenu.addEventListener("change", function () {
   }
 });
 
+// Confirma se o usuario esta logado
+function checkAuthentication() {
+  const token = localStorage.getItem('authToken');
+
+  if (!token) {
+    localStorage.setItem('loginMessage', 'Por favor faça o login para acessar o sistema');
+    window.location.href = "../../index.html";
+  }
+}
+
+window.onload = checkAuthentication;
+
