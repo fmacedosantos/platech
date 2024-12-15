@@ -1,7 +1,7 @@
-# Projeto SEV
-[Site do projeto](https://fmacedosantos.github.io/projeto-SEV/)
+# Platech
+[Site do projeto](https://fmacedosantos.github.io/platech/)
 ## Descrição do Projeto
-O Projeto SEV (PLATECH) visa desenvolver um sistema que auxilia no gerenciamento de veículos emplacados, proporcionando uma solução eficiente para o registro e controle de placas emitidas.
+A PLATECH visa desenvolver um sistema que auxilia no gerenciamento de veículos emplacados, proporcionando uma solução eficiente para o registro e controle de placas emitidas.
 
 ## Cliente
 - **Nome:** Emplacar Campinas
